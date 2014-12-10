@@ -7,24 +7,52 @@ abstract class User
 
 	}
 }
+class Guests extends User
+{}
 
-abstract class RegistredUser extends User
+class RegistredUser extends User
 {
 	public login;
 	private password;
 	public email;
-	public function getProfile();
-	public function editProfile();
-	public function isEditAllowed(login)
+	public function getProfile(){}
+	public function editProfile()
+	{
+		public function isEditAllowed(login)
 		{
 			if (this.login!=login)
 				{return false;}
 		}
-}
+	}
+	public function addRecords(Item_id,who_seller){
+		if (this.login!=who_seller)
+				return false;
+	}
+	public function editRecords(Item_id,who_seller){
+		if (this.login!=who_seller)
+				return false;
+	}
+	public function dellRecords(Item_id,who_seller)
+	{
+		if (this.login!=who_seller)
+				return false;
+	}
+	public function sell(Item_id,who_seller)
+	{
+		if (this.login!=who_seller)
+				return false;
+		else 
+		{
+			public function pay();
+			dellRecords(Item_id,login); //удаляем товар из списка, чтобы никто не купил его дважды
+		}
+	
+	}
+	public function buy(Item_id,who_seller)
+	{
+		
+	}
 
-class Guests extends User
-{
-}
 
 class Admins extends RegistredUser()
 {
@@ -36,50 +64,9 @@ class Admins extends RegistredUser()
 	{
 		return true;
 	}
-	abstract public function buy (Item_id);
-}
-class Seller extends RegistredUser()
-{
-		public status;
-		public function sail (Item_id);
-		public function buy (Item_id)
-		{
-			if (this.Item_id==Item_id)
-			{
-				return false;   //нельзя продавцу купить свой же товар
-			}
-		}
-		public function addRecords(Item_id);
-		{
-			if (this.Item_id==Item_id)
-			{
-				return false;   //нельзя продавцу купить свой же товар
-			}
-		}
-		public function editRecords(Item_id);
-		{
-			if (this.Item_id==Item_id)
-			{
-				return false;   //нельзя продавцу купить свой же товар
-			}
-		}
-		public function dellRecords(Item_id)
-		{
-			if (this.Item_id==Item_id)
-			{
-				return false;   //нельзя продавцу купить свой же товар
-			}
-		}
-
 }
 
-class Buyer extends RegistredUser()
-{
 
-		public status;
-		public function buy (Item_id);
-		public function pay ();
-}
 
 class Item 
 {
@@ -89,6 +76,7 @@ class Item
 	public area; // общая площадь
 	public size; //размеры
 	public price;
+	public who_seller;//здесь будем хранить login продавца конкретного товара
 }
 
 ?>
