@@ -17,9 +17,15 @@
 		<div >
 			<h3 >Регистрация</h3>
 			<form  method="POST" action="1.php">
-				<p><input type="text" name="login" value="email" required></p>
-				<p><input type="text" name="login" value="Ваш логин" required></p>
-					<p><input type="password" name="pass" value="пароль"required></p>
+				<p><label>Введите email </label>
+					<input type="email" name="login" placeholder="email" required>
+				</p>
+				<p><label>Введите логин </label>
+					<input type="text" name="login" placeholder="Ваш логин" required>
+				</p>
+					<p><label>Введите пароль </label>
+						<input type="password" name="pass" placeholder="пароль"required>
+					</p>
 					<label>Выберите пол:</label>
 					<select name="change_pol">
 						<option value="man">Мужской
