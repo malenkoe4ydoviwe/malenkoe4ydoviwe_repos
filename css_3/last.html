@@ -25,9 +25,33 @@
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 			}
+			p {
+				line-height: 2;
+				text-indent: 25px;
+				word-spacing: 20px;
+
+			}
+			.one {
+				-o-tab-size: 4; /* Opera   почему-то это свойство упрямо отказывается работать */
+    			-moz-tab-size: 4; /* Firefox  почему-то это свойство упрямо отказывается работать */
+				font-stretch: ultra-condensed;
+				font-family: monospace;
+				color: #232EFF;
+				font-weight: bold;
+
+			}
+
 			#yandex {
+
 				text-decoration: overline;
 				color: green;
+				 -moz-text-decoration-color: #FF00AE; /*работает только в мозилле*/
+				 -moz-text-decoration-style: wavy; /*работает только в мозилле*/
+
+
+			}
+			a {
+				-moz-text-decoration-style: double;/*работает только в мозилле*/
 			}
 
 			h2 {
@@ -53,21 +77,14 @@
 				width: 50%;
 				border: 1px solid maroon;
 			}
-			p {
-				line-height: 2;
-				text-indent: 25px;
-			}
-			.1 {
-				font-stretch: ultra-condensed;
-				font-family: monospace;
-			}
+		
 
 		</style>
 	</head> 
 	<body>
 		<div class="wrapper">
 		<h1>Why do we use it?</h1>
-		<p class="1">
+		<p class="one">
 			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 		</p>
 		<h2>Where can I get some?</h2>
