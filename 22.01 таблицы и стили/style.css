@@ -1,0 +1,40 @@
+
+
+table {
+	border: 2px solid red;
+	border-collapse: collapse;
+
+}
+.wrapper {
+	padding-top: 20px;
+	width: 80%;
+	margin: 0 auto;
+}
+th {
+	background-color: pink;
+}
+
+td, th {
+	width: 5%;
+	padding: 2% 2%;
+	text-align: center;
+	border-bottom: 2px solid red;
+	border-right: 2px solid red;
+	border-collapse: collapse;
+
+}
+
+
+
+
+.odd {
+	background-color: grey;
+}
+
+.b_b {
+	border-bottom: 4px solid red;
+}
+
+.r_b {
+	border-right: 4px solid red;
+}
